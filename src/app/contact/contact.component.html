@@ -1,1 +1,20 @@
-<p>contact works!</p>
+<div class="container text-white">
+  <h1>Contact Me</h1>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <div class="row">
+      <input
+        name="name"
+        placeholder="Your Name"
+        ngModel
+        required
+        #name="ngModel"
+      />
+    </div>
+    <div class="row">
+      <input name="message" placeholder="Your Message" ngModel required />
+    </div>
+    <div class="row">
+      <button>Submit</button>
+    </div>
+  </form>
+</div>
